@@ -2,8 +2,7 @@ import { ChangeDetectionStrategy, Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
 import { Observable } from "rxjs";
 import { BackendService } from "src/app/backend.service";
-import { Ticket } from "src/interfaces/ticket.interface";
-import { User } from "src/interfaces/user.interface";
+import { Ticket } from "src/app/modules/ticket/models/ticket.interface";
 
 @Component({
   selector: "app-ticket-list",
@@ -13,7 +12,7 @@ import { User } from "src/interfaces/user.interface";
 })
 export class TicketListComponent implements OnInit {
 
-  public readonly tickets$: Observable<Ticket[]> = this.backendService.tickets();
+  public readonly tickets$: Observable<Ticket[]> = this.backendService.tickets(); // TODO : need to put logic in resolver
 
   constructor(
     private readonly backendService: BackendService,

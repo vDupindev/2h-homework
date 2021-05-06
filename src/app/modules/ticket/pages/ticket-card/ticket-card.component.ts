@@ -1,10 +1,9 @@
-import { ChangeDetectionStrategy, OnDestroy } from "@angular/core";
+import { ChangeDetectionStrategy } from "@angular/core";
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
-import { take } from "rxjs/operators";
 import { BackendService } from 'src/app/backend.service';
-import { Ticket } from 'src/interfaces/ticket.interface';
+import { Ticket } from 'src/app/modules/ticket/models/ticket.interface';
 
 @Component({
   selector: 'app-ticket-card',
@@ -20,9 +19,7 @@ export class TicketCardComponent implements OnInit {
 
   ngOnInit(): void {
     const ticketId = this.route.snapshot.paramMap.get('id');
-    this.ticket$ = this.backendService.ticket(+ticketId).pipe(take(1));
+    this.ticket$ = this.backendService.ticket(+ticketId); // TODO : need to put logic in resolver
   }
-
-
 
 }
