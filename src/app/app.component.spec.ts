@@ -1,12 +1,14 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { BackendService } from './backend.service';
 
 describe('AppComponent', () => {
     let fixture: ComponentFixture<AppComponent>;
 
     beforeEach(() => {
         TestBed.configureTestingModule({
-            declarations: [AppComponent]
+            declarations: [AppComponent],
+            providers: [BackendService]
         });
 
         fixture = TestBed.createComponent(AppComponent);

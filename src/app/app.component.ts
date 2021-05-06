@@ -11,6 +11,8 @@ import { BackendService } from './backend.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  private title = 'app';
+  
   public readonly users$: Observable<User[]> = this.backendService.users();
   public readonly tickets$: Observable<Ticket[]> = this.backendService.tickets();
 
