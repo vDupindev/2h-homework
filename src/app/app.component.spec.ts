@@ -8,7 +8,6 @@ describe('AppComponent', () => {
     beforeEach(() => {
         TestBed.configureTestingModule({
             declarations: [AppComponent],
-            providers: [BackendService]
         });
 
         fixture = TestBed.createComponent(AppComponent);

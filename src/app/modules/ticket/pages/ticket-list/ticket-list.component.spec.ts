@@ -1,16 +1,17 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from "@angular/core/testing";
+import { BackendService } from "src/app/backend.service";
 
-import { TicketListComponent } from './ticket-list.component';
+import { TicketListComponent } from "./ticket-list.component";
 
-describe('TicketListComponent', () => {
+describe("TicketListComponent", () => {
   let component: TicketListComponent;
   let fixture: ComponentFixture<TicketListComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TicketListComponent ]
-    })
-    .compileComponents();
+      declarations: [TicketListComponent],
+      providers: [BackendService],
+    }).compileComponents();
   });
 
   beforeEach(() => {
@@ -19,7 +20,7 @@ describe('TicketListComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

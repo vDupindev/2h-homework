@@ -7,7 +7,7 @@ import { AppRoutingModule } from "./app.routing.module";
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, SharedModule, AppRoutingModule],
+  imports: [ BrowserModule, SharedModule, AppRoutingModule],
   providers: [BackendService],
   bootstrap: [AppComponent],
 })
