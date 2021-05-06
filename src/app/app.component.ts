@@ -12,9 +12,9 @@ import { BackendService } from './backend.service';
 })
 export class AppComponent {
   private title = 'app';
-  
+  /*
   public readonly users$: Observable<User[]> = this.backendService.users();
   public readonly tickets$: Observable<Ticket[]> = this.backendService.tickets();
-
-  constructor(private readonly backendService: BackendService) {}
+*/
+  constructor(/*private readonly backendService: BackendService*/) {}
 }
