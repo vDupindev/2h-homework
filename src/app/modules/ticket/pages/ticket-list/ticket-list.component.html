@@ -3,5 +3,6 @@
 <ul>
   <li *ngFor="let ticket of tickets$ | async">
     Ticket: {{ ticket.id }}, {{ ticket.description }}
+    <button (click)="redirectToTicketCard(ticket.id)">See more</button>
   </li>
 </ul>

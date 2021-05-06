@@ -1,5 +1,6 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
+import { TicketCardComponent } from "./pages/ticket-card/ticket-card.component";
 import { TicketListComponent } from "./pages/ticket-list/ticket-list.component";
 
 export const DEFAULT_ROUTE = "/ticket/list";
@@ -14,6 +15,10 @@ export const routes: Routes = [
       {
         path: "list",
         component: TicketListComponent,
+      },
+      {
+        path: ":id",
+        component: TicketCardComponent,
       },
     ],
   },
