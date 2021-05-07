@@ -13,12 +13,18 @@ describe("TicketCardComponent", () => {
     await TestBed.configureTestingModule({
       declarations: [TicketCardComponent],
       providers: [
-        BackendService,
         {
           provide: ActivatedRoute,
           useValue: {
             params: of({ id: 1 }),
             snapshot: {
+              data: {
+                assignee: { id: 111, name: "Victor" },
+                assigneeId: 111,
+                completed: false,
+                description: "Install a monitor arm",
+                id: 0,
+              },
               paramMap: {
                 get(): string {
                   return "";

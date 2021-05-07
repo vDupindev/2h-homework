@@ -1,6 +1,10 @@
 <div *ngIf="ticket$ | async as ticket">
+  <h2>Ticket</h2>
   <p>{{ ticket?.id }}</p>
   <p>{{ ticket?.completed }}</p>
-  <p>{{ ticket?.assigneeId }}</p>
   <p>{{ ticket?.description }}</p>
+
+  <h2>User</h2>
+  <p>{{ ticket?.assignee?.id }}</p>
+  <p>{{ ticket?.assignee?.name }}</p>
 </div>
